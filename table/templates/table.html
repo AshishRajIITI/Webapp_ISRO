@@ -38,6 +38,29 @@
         }
     }
 </script>
+<style>
+table {
+  /* width: 100%; */
+  border: 1px solid black;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50 !important;
+  color: white;
+}
+</style>
 <input type="file" id="fileUpload" />
 <input type="button" id="upload" value="Upload" onclick="Upload()" />
 <button onclick="location.href = '/'">Back</button>
