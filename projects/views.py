@@ -8,9 +8,9 @@ def project_index(request):
     }
     return render(request, 'project_index.html', context)
 
-def project_detail(request, pk):
-    project = Project.objects.get(pk=pk)
+def documentation(request, pk):
+    project = Project.objects.get()
     context = {
         'project': project
     }
-    return render(request, 'project_detail.html', context)
+    return render(request, 'documentation.html', context)
