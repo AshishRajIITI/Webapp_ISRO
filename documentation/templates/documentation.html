@@ -1,6 +1,59 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-<h1>Hello, World documentation</h1>
-<button onclick="location.href = '/'">Back</button>
+<div class="container">
+<h1 style="padding-top: 50px;">Indtroduction:</h1>
+<p>AstroSat is the first dedicated Indian astronomy mission aimed at studying celestial sources in X-ray, optical and UV
+    spectral bands.
+</p>
+<p>This website hosts a visualization tool for AstroSat observations. It allows viewing of an astronomical catalogue as
+    an interactive map of the sources. It also allows users to select a source and <br>(i) check if it has beens
+    observed by AstroSat<br> (ii) view and download basic information and publications about the source.</p>
+<p>The site was developed as a part of the InterIIT Tech Meet held in March 2021.</p>
+<h1>Usage:</h1>
+<ul>
+    <li>Uploading and viewing catalogs:</li>
+    <p>From the main page or menu, select the View table page. By default, an updated version of the van Paradijis
+        catalogue of X-ray sources - the V/106 catalogue from the Vizier repository compiled by Liu et. al in 2001.
+        You can upload and display any other catalogue in .csv format by clicking on the Upload button.
+    </p>
+    <li>Using the map:</li>
+    <p>In order to display a catalogue in the interactive map, it should be in the form of a .dat or .csv with the
+        positions of the objects given in RA (Right Ascension) and Dec (Declination), in the J2000 epoch. The column
+        containing these values should be named “RAJ2000” and “DEJ2000”. It is recommended, but not required, that the
+        columns be in the order: “Name of object”, “Type of object”, “RA value”, “Dec value”, followed by the remaining
+        data.
+        In order to view the map, simply press on the “View Map” button on the home page or menu. You will find the
+        objects plotted as a map with the coordinates being their RA and Dec positions (in the J2000 epoch).
+        The map can be interacted with by zooming in and out or scrolling using the mouse or the in-map controls.
+        Clicking on a source will display its name and other basic information that will allow you to download relevant
+        data about the object.
+    </p>
+    <li>Downloading data and publications:</li>
+    <p>For downloading the records containing information about the object such as:<br>
+        (i) Its name(s) or designations<br>
+        (ii) Position in J2000 epoch<br>
+        (iii) Photometric data such as magnitude, color filter data (U-V, U-B,..), flux etc<br>
+        (iv) Orbital period, pulse period, etc<br>
+
+        Furthermore, the map displays references for the research papers from which the values for orbital and pulse
+        periods were obtained. Moreover, if the object has been observed by AstroSat; then the references for any
+        publications resulting from those observations are also given.
+        <br>All of this data can be downloaded via the download button.
+    </p>
+    <p>To obtain the research paper from the reference:</p>
+    <ul>
+        <li>The reference is in the form Bibcode-Author Name</li>
+        <li>The complete information about the publication (such as Title, Journal name and issue) can be found by going
+            to the URL: https://doi.org/Bib-code</li>
+    </ul>
+
+</ul>
+<h1>Acknowledgements:
+</h1>
+<p>We thank the InterIIT Tech Meet 9.0 organizing committee and ISRO for the opportunity to work on this project. We
+    thank ISRO and the Vizier repository for the necessary astronomical data.<br>
+    This tool uses several Open source libraries including Aladin and Django.</p>
+<button style="margin-bottom: 50px; margin-top: 20px;color:black;background-color: rgb(253, 144, 153);" onclick="location.href = '/'">Back</button>
+</div>
 {% endblock %}
